@@ -1,6 +1,6 @@
 const Users = require("../models/User")
 
-//function for adding user
+//function to add user
 exports.adduser = async (req, res) => {
     var User = new Users(req.body)
     User.save().then(function () {
@@ -26,7 +26,7 @@ exports.login = async (req, res) => {
         console.log(e);
     }
 }
-//update
+//update for user
 exports.updateUser = async (req, res) => {
     Users.findByIdAndUpdate(req.params.id, req.body)
         .then(function () {
@@ -36,6 +36,7 @@ exports.updateUser = async (req, res) => {
         })
 }
 
+//see user details
 exports.userdetail = async (req, res) => {
     // console.log(req.params.id)
     Users.findById(req.params.id)
@@ -59,7 +60,7 @@ exports.logout = async (req, res) => {
     }
 }
 
-//delete
+//delete code
 exports.deleteUser = async (req, res) => {
     Users.findByIdAndDelete(req.params.id)
         .then(function () {
