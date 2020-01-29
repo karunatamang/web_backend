@@ -39,8 +39,8 @@ const userSchema = mongoose.Schema({
 });
 
 userSchema.statics.checkCrediantialsDb = async (user22, pass11) => {
-    const user1 = await User.findOne({ email: user22, password: pass11 })
-    return user1;
+    const user111 = await User.findOne({ email: user22, password: pass11 })
+    return user111;
 }
 
 userSchema.methods.generateAuthToken = async function () {
