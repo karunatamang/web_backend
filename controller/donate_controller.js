@@ -8,7 +8,6 @@ exports.addDonation = (req, res) => {
         res.send(e)
     })
 }
-
 exports.getDonations = (req, res) => {
     Donation.find().populate('donor')
         .then(donations => {
