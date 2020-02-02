@@ -8,7 +8,6 @@ exports.addContact = (req, res) => {
         res.send(e)
     })
 }
-
 exports.viewContact = (req, res) => {
     Contact.find().then(function (contact) {
         res.send(contact);
@@ -16,7 +15,6 @@ exports.viewContact = (req, res) => {
         res.send(er);
     });
 }
-
 exports.viewContactById = (req, res) => {
     Contact.findOne({ _id: req.params.id }).then(function (contact) {
         res.send(contact);
